@@ -9,9 +9,10 @@ module.exports = function(defaults) {
   var babelOptions = {};
   if (includePolyfill) {
     babelOptions.includePolyfill = true;
-  } else {
-    babelOptions.blacklist = ['regenerator'];
   }
+  // else {
+  //   babelOptions.exclude = ['regenerator'];
+  // }
 
   var app = new EmberAddon(defaults, {
     minifyJS: {
